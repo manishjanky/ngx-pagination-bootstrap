@@ -5,7 +5,6 @@
 ## Examples
 
 * [demo-page](https://manishjanky.github.io)
-* [example-repo](https://manishjanky.github.io)
 
 ## Installation
 
@@ -62,9 +61,9 @@ class YourModule { ... }
       data: null,
 }
 ```
-- *event*: the triggered event
-- *pageNo*: current page number
-- *data*: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from you api or the way you want it to handle
+- **event**: the triggered event
+- **pageNo**: current page number
+- **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from you api or the way you want it to handle
 
 ## Help Improve
 
