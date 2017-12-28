@@ -1,10 +1,10 @@
 {
-  "name": "ng-bootstrap-pagination",
-  "version": "1.0.0",
+  "name": "ngx-pagination-bootstrap",
+  "version": "1.0.2",
   "description": "A bootstrap(4) based angular(4+) pagination module.",
-  "main": "ng-bootstrap-pagination.umd.js",
-  "jsnext:main": "ng-bootstrap-pagination.esm.js",
-  "module": "ng-bootstrap-pagination.esm.js",
+  "main": "ngx-pagination-bootstrap.umd.js",
+  "jsnext:main": "ngx-pagination-bootstrap.esm.js",
+  "module": "ngx-pagination-bootstrap.esm.js",
   "types": "index.d.ts",
   "scripts": {
     "copy": "node tools/copy-package.js && node tools/cleanup.js",

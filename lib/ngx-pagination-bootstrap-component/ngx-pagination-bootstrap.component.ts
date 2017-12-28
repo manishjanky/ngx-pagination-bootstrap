@@ -2,8 +2,8 @@ import { Component, OnInit, Input, EventEmitter,Output } from "@angular/core";
 
 @Component({
   selector: "ng-pagination",
-  templateUrl: "./ng-bootstrap-pagination.component.html",
-  styleUrls: ["./ng-bootstrap-pagination.component.css"]
+  templateUrl: "./ngx-pagination-bootstrap.component.html",
+  styleUrls: ["./ngx-pagination-bootstrap.component.css"]
 })
 export class PaginationComponent implements OnInit {
   /*Get the required inputs i.e pageSize and no of items*/
