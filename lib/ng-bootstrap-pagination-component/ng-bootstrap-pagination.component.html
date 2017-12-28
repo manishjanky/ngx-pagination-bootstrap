@@ -1,0 +1,37 @@
+<nav aria-label="pagination" class="p-1 d-flex" [ngClass]="{'justify-content-center':position=='center','justify-content-end':position=='right'}">
+  <select [(ngModel)]="pageSize" class="form-control p-0" style="width:50px" (change)="changePageSize()">
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="50">50</option>
+  </select>
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{'disabled':currentPage == 1}">
+      <button [disabled]="currentPage == 1" (click)="navigateToPage(1)" class="page-link" aria-label="first">
+        <span aria-hidden="true">First</span>
+        <span class="sr-only">First</span>
+      </button>
+    </li>
+    <li class="page-item">
+      <button [disabled]="currentPage == 1" (click)="previousPage()" class="page-link" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </button>
+    </li>
+    <li [ngClass]="{'active':currentPage == page}" class="page-item" *ngFor="let page of pages" (click)="navigateToPage(page)">
+      <button class="page-link">{{page}}</button>
+    </li>
+    <li class="page-item">
+      <button [disabled]="currentPage == totalPages[totalPages.length -1]" (click)="nextPage()" class="page-link" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </button>
+    </li>
+    <li class="page-item" [ngClass]="{'disabled':currentPage == totalPages[totalPages.length -1]}">
+      <button [disabled]="currentPage == totalPages[totalPages.length -1]" (click)="navigateToPage(totalPages[totalPages.length -1])"
+        class="page-link" aria-label="last">
+        <span aria-hidden="true">Last</span>
+        <span class="sr-only">Last</span>
+      </button>
+    </li>
+  </ul>
+</nav>

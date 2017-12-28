@@ -1,2 +1,4 @@
 # ng-bootstrap-pagination
-A bootstrap(4) based angular(4+) pagination module.
+
+Bootstrap(4) based pagination module for angulat(4+) applications
+
