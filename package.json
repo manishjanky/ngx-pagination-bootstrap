@@ -12,7 +12,28 @@
     "postbundle": "node tools/removecode.js",
     "build": "npm run bundle && npm run copy"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manishjanky/ngx-pagination-bootstrap.git"
+  },
+  "keywords": [
+    "angular",
+    "angular-2",
+    "angular-4",
+    "angular2",
+    "angular4",
+    "ng2",
+    "ng4",
+    "ngx",
+    "bootstrap",
+    "bootstrap4",
+    "pagination"
+  ],
   "author": {"name":"Manish Kumar","email":"manishjanky@gmail.com"},
+  "bugs": {
+    "url": "https://github.com/manishjanky/ngx-pagination-bootstrap/issues"
+  },
+  "homepage": "https://github.com/manishjanky/ngx-pagination-bootstrap#readme",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "^5.0.0",
