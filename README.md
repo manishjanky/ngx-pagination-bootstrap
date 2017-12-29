@@ -63,9 +63,10 @@ class YourModule { ... }
 
 ```
 {
-    event: event,
-    pageNo: pageNo,
-    data: null,
+    event: event: Event,
+    pageNo: pageNo: number,
+    pageSize:pageSize: number,
+    data: null| Array,
 }
 ```
 - **event**: the triggered event
