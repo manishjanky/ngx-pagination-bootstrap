@@ -37,6 +37,7 @@ export class PaginationComponent implements OnInit {
     let $event = {
       event: event,
       pageNo: pageNo,
+      pageSize:this.pageSize,
       data: null
     };
     this.getPageItems($event);
@@ -54,7 +55,7 @@ export class PaginationComponent implements OnInit {
 
   getCurrentPageData(){
     //return new data data is already available
-    let start = ((this.currentPage -1 )* this.pageSize) +1;
+    let start = ((this.currentPage) * this.pageSize);
     let end = start + this.pageSize;
     return this.data.slice(start,end);
   }
