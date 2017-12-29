@@ -9,7 +9,7 @@
 ## Installation
 
 * `npm install ngx-pagination-bootstrap`
-* include bootstrap scripts and styles in you `angular-cli.json`
+* include bootstrap scripts and styles in you `angular-cli.json` to be build of your build process
 
 ### For webpack and tsc builds/ angular-cli builds
 
@@ -39,7 +39,7 @@ class YourModule { ... }
 <ng-pagination [position]="'left'" [pageSize]="10" [itemsCount]="data.length" [data]="data" (getPageData)="getPageData($event)"></ng-pagination>
 ```
 
-* do not forget to include bootstrap css in your buildproess, module or index.html!
+* do not forget to include bootstrap css in your build process, module or index.html!
 
 ## Config
 
@@ -48,7 +48,7 @@ class YourModule { ... }
 * `pageSize: number` - Size of a page i.e number of items to be displayed in one page.
 * `itemsCount: number` - total no of itmes that needs ro be paged/total no of records.
 * `position: string` - position of the pagination respect to parent contrainer of your pagination component.
-* `data: any` - Optional | the data needs to be paged default is null. If pagination is handled by api no need of data.
+* `data: Array` - Optional | the data needs to be paged default is null. If pagination is handled by api no need of data.
 
 ### Output
 
@@ -56,14 +56,14 @@ class YourModule { ... }
 
 ```
 {
-      event: event,
-      pageNo: pageNo,
-      data: null,
+    event: event,
+    pageNo: pageNo,
+    data: null,
 }
 ```
 - **event**: the triggered event
 - **pageNo**: current page number
-- **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from you api or the way you want it to handle
+- **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from your api or the way you want it to handle
 
 ## Help Improve
 

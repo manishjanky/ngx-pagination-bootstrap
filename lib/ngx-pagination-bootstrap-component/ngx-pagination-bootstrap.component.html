@@ -1,5 +1,5 @@
 <nav aria-label="pagination" class="p-1 d-flex" [ngClass]="{'justify-content-center':position=='center','justify-content-end':position=='right'}">
-  <select [(ngModel)]="pageSize" class="form-control p-0" style="width:50px" (change)="changePageSize()">
+  <select data-toggle="tooltip" data-placement="top" title="Items Per Page" [(ngModel)]="pageSize" class="form-control p-0" style="width:50px" (change)="changePageSize()">
     <option value="10">10</option>
     <option value="20">20</option>
     <option value="50">50</option>

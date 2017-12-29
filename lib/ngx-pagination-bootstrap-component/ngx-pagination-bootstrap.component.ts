@@ -7,7 +7,7 @@ import { Component, OnInit, Input, EventEmitter,Output } from "@angular/core";
 })
 export class PaginationComponent implements OnInit {
   /*Get the required inputs i.e pageSize and no of items*/
-  @Input() pageSize: number;
+  @Input() pageSize: number = 10;
   @Input() itemsCount: number;
   @Input() data: any = null;
   @Input() position: string = "left";
@@ -19,6 +19,9 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit() {
     this.calculatePageNumbers();
+    if(this.data != null){
+      this.itemsCount = this.data.length;
+    }
   }
 
   calculatePageNumbers() {
