@@ -1,6 +1,6 @@
 {
   "name": "ngx-pagination-bootstrap",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A bootstrap(4) based angular(4+) pagination module.",
   "main": "ngx-pagination-bootstrap.umd.js",
   "jsnext:main": "ngx-pagination-bootstrap.esm.js",
