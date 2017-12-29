@@ -40,6 +40,10 @@ export class PaginationComponent implements OnInit {
       pageSize:this.pageSize,
       data: null
     };
+    this.changePageData($event);
+  }
+
+  changePageData($event){
     this.getPageItems($event);
     this.getNextPagesArrayToDisplay();
   }
@@ -72,6 +76,13 @@ export class PaginationComponent implements OnInit {
   changePageSize(){
     this.calculatePageNumbers();
     this.currentPage = 1;
+    let $event = {
+      event: event,
+      pageNo: 1,
+      pageSize:this.pageSize,
+      data: null
+    };
+    this.changePageData($event);
     //might need some other processing later
   }
 
