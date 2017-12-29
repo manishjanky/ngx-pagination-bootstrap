@@ -60,7 +60,7 @@ export class PaginationComponent implements OnInit {
   getCurrentPageData(){
     //return new data data is already available
     let start = ((this.currentPage - 1) * this.pageSize);
-    let end = start + this.pageSize;
+    let end = start + Number(this.pageSize);
     return this.data.slice(start,end);
   }
   getNextPagesArrayToDisplay(){
