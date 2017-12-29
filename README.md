@@ -9,7 +9,14 @@
 ## Installation
 
 * `npm install ngx-pagination-bootstrap`
-* include bootstrap scripts and styles in you `angular-cli.json` to be build of your build process
+* `npm install bootstrap@4.0.0-alpha.6 --save-dev`
+* include bootstrap scripts and styles in you `angular-cli.json` to be build of your build process.
+* or include bootstrap css in your index.html 
+
+`````
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+`````
+* Right now `bootstrap@4.0.0-alpha.6` is supported will add support for other versions soon.
 
 ### For webpack and tsc builds/ angular-cli builds
 
