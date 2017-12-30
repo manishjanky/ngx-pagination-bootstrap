@@ -23,5 +23,15 @@ coverage/
 docs
 tmp
 
+tsconfig*
+tslint*
+webpack*
+yarn*
+karma*
+gulpfile*
+.editorconfig
+.travis.yml
+
+
 # Library files
 src/

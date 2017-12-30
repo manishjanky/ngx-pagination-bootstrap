@@ -8,15 +8,15 @@ import { any } from "bluebird";
 })
 export class PaginationComponent implements OnInit {
   /*Get the required inputs i.e pageSize and no of items*/
-  @Input() pageSize: number = 10;
-  @Input() itemsCount: number;
-  @Input() data: any = null;
-  @Input() position: string = "left";
+  @Input()  pageSize: number = 10;
+  @Input()  itemsCount: number;
+  @Input()  data: any = null;
+  @Input()  position: string = "left";
   @Output() getPageData = new EventEmitter<any>();
-  currentPage: number = 1;
-  totalPages: any = [];
-  pages: any = [];
-  nullAble: any = null
+  private currentPage: number = 1;
+  private totalPages: any = [];
+  private pages: any = [];
+  private nullAble: any = null
   constructor() { }
 
   ngOnInit() {

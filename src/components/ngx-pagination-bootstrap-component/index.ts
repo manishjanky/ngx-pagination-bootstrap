@@ -1,1 +1,1 @@
-export * from './ngx-pagination-bootstrap.component'
+export * from './ngx-pagination-bootstrap.component';

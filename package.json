@@ -38,7 +38,7 @@
     "build:umd": "webpack --config webpack-umd.config.ts",
     "build:umd:watch": "npm run build:umd -- --watch",
     "build:watch": "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
-    "ci": "npm run lint && npm run test && npm run build && npm run docs",
+    "ci": "npm run build",
     "clean:all": "npm run clean:tmp && rimraf node_modules",
     "clean:tmp": "rimraf coverage dist tmp docs",
     "codecov": "cat coverage/lcov.info | codecov",
@@ -51,10 +51,7 @@
     "prebuild": "rimraf dist tmp",
     "prebuild:watch": "rimraf dist tmp",
     "prepublishOnly": "npm run ci",
-    "preversion": "npm run ci",
-    "test": "karma start",
-    "test:watch": "karma start --auto-watch --no-single-run",
-    "tslint": "tslint"
+    "preversion": "npm run ci"
   },
   "dependencies": {
     "@angular/forms": "^5.1.2",
