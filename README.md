@@ -4,7 +4,7 @@
 
 ## Examples
 
-* [demo-page](https://manishjanky.github.io)
+* [demo-page](https://manishjanky.github.io/ngx-pagination-bootstrap-demo/)
 
 ## Installation
 
