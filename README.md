@@ -1,4 +1,6 @@
-# ngx-pagination-bootstrap [![Build Status](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap.svg?branch=master)](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap)
+# ngx-pagination-bootstrap
+
+[![Build Status](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap.svg?branch=master)](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap)
 
 `ngx-pagination-bootstrap` is Bootstrap(4) based pagination module for angulat(2+) applications
 
