@@ -13,9 +13,9 @@ export class PaginationComponent implements OnInit {
   @Input() data: any = null;
   @Input() position: string = "left";
   @Output() getPageData = new EventEmitter<any>();
-  currentPage: number = 1;
-  totalPages: any = [];
-  pages: any = [];
+  public currentPage: number = 1;
+  public totalPages: any = [];
+  public pages: any = [];
   nullAble: any = null
   constructor() { }
 
@@ -28,8 +28,8 @@ export class PaginationComponent implements OnInit {
 
   calculatePageNumbers() {
     let pages = Math.ceil(this.itemsCount / this.pageSize);
-    this.totalPages = new Array(pages);
-    for (let y = 0; y < this.totalPages.length; y++) {
+    this.totalPages =[];
+    for (let y = 0; y < pages; y++) {
       this.totalPages[y] = y + 1;
     }
     this.pages = this.totalPages.slice(0, 5);
