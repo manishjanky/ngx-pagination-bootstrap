@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { PaginationComponent } from "./components/ngx-pagination-bootstrap-component/ngx-pagination-bootstrap.component";
 
 @NgModule({
-  declarations: [PaginationComponent],
-  imports: [CommonModule,FormsModule],
-  exports: [PaginationComponent],
+  declarations: [ PaginationComponent ],
+  imports: [ CommonModule, FormsModule ],
+  exports: [ PaginationComponent ],
   providers: [],
   bootstrap: []})
 export class PaginationModule {}

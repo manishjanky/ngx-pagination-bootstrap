@@ -8,66 +8,66 @@ import { any } from "bluebird";
 })
 export class PaginationComponent implements OnInit {
   /*Get the required inputs i.e pageSize and no of items*/
-  @Input() pageSize: number = 10;
-  @Input() itemsCount: number;
-  @Input() data: any = null;
-  @Input() position: string = "left";
-  @Output() getPageData = new EventEmitter<any>();
+  @Input() public pageSize: number;
+  @Input() public itemsCount: number;
+  @Input() public data: any = null;
+  @Input() public position: string = "left";
+  @Output() public getPageData = new EventEmitter<any>();
   public currentPage: number = 1;
   public totalPages: any = [];
   public pages: any = [];
-  nullAble: any = null
-  constructor() { }
+  private nullAble: any = null;
+  constructor() {
+    this.pageSize = 10;
+  }
 
-  ngOnInit() {
+  public ngOnInit() {
     if (this.data != null) {
       this.itemsCount = this.data.length;
     }
     this.calculatePageNumbers();
   }
 
-  calculatePageNumbers() {
-    let pages = Math.ceil(this.itemsCount / this.pageSize);
-    this.totalPages =[];
+  public calculatePageNumbers() {
+    const pages = Math.ceil(this.itemsCount / this.pageSize);
+    this.totalPages = [];
     for (let y = 0; y < pages; y++) {
       this.totalPages[y] = y + 1;
     }
     this.pages = this.totalPages.slice(0, 5);
   }
 
-  navigateToPage(pageNo: number) {
-    console.log(pageNo);
+  public navigateToPage(pageNo: number) {
     this.currentPage = pageNo;
-    let $event = {
-      event: event,
-      pageNo: pageNo,
+    const $event = {
+      event,
+      pageNo,
       pageSize: this.pageSize,
       data: this.nullAble
     };
     this.changePageData($event);
   }
 
-  changePageData($event: any) {
+  public changePageData($event: any) {
     this.getPageItems($event);
     this.getNextPagesArrayToDisplay();
   }
 
-  getPageItems($event: any) {
+  public getPageItems($event: any) {
     let thisPageData: any = null;
     if (this.data != null) {
       thisPageData = this.getCurrentPageData();
     }
-    $event.data = thisPageData
+    $event.data = thisPageData;
     this.getPageData.emit($event);
   }
 
-  getCurrentPageData() {
-    //return new data data is already available
-    let start = ((this.currentPage - 1) * this.pageSize);
-    let end = start + Number(this.pageSize);
+  public getCurrentPageData() {
+    const start = ((this.currentPage - 1) * this.pageSize);
+    const end = start + Number(this.pageSize);
     return this.data.slice(start, end);
   }
-  getNextPagesArrayToDisplay() {
+  public getNextPagesArrayToDisplay() {
     let startIndex = this.currentPage - 3 >= 0 ? this.currentPage - 3 : 0;
     let endIndex = this.currentPage + 2 < 5 ? 5 : this.currentPage + 2;
     if (endIndex > this.totalPages.length) {
@@ -77,24 +77,23 @@ export class PaginationComponent implements OnInit {
     this.pages = this.totalPages.slice(startIndex, endIndex);
   }
 
-  changePageSize() {
+  public changePageSize() {
     this.calculatePageNumbers();
     this.currentPage = 1;
-    let $event = {
-      event: event,
+    const $event = {
+      event,
       pageNo: 1,
       pageSize: this.pageSize,
       data: this.nullAble
     };
     this.changePageData($event);
-    //might need some other processing later
   }
 
-  nextPage() {
+  public nextPage() {
     this.navigateToPage(this.currentPage + 1);
   }
 
-  previousPage() {
+  public previousPage() {
     this.navigateToPage(this.currentPage - 1);
   }
 
