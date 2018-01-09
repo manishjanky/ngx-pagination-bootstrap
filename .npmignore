@@ -1,5 +1,5 @@
 # Node
-node_modules
+/node_modules
 npm-debug.log
 
 # Yarn
@@ -25,3 +25,10 @@ tmp
 
 # Library files
 src/
+
+webpack*
+ts*
+karma*
+.travis*
+gulpfile*
+yarn*
