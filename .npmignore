@@ -32,3 +32,4 @@ karma*
 .travis*
 gulpfile*
 yarn*
+.editorconfig
