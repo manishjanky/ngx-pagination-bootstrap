@@ -4,7 +4,7 @@
 
 ## Examples
 
-* [demo-page](https://manishjanky.github.io)
+* [demo-page](https://manishjanky.github.io/ngx-pagination-bootstrap-demo/)
 
 ## Installation
 
@@ -71,6 +71,7 @@ class YourModule { ... }
 ```
 - **event**: the triggered event
 - **pageNo**: current page number
+- **pageSize**: current page size. No of items per page
 - **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from your api or the way you want it to handle
 
 ## Help Improve

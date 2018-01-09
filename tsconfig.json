@@ -1,19 +1,36 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
-    "sourceMap": true,
+    "module": "commonjs",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "declaration": false,
+    "noImplicitAny": false,
     "experimentalDecorators": true,
-    "declaration": true,
-    "outDir": "./dist",
-    "lib": ["es2015", "dom"]
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "typeRoots" : [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jasmine",
+      "karma",
+      "node",
+      "webpack",
+      "webpack-env"
+    ]
   },
-  "files": [
-    "./lib/index.ts"
+  "include": [
+    "src/**/*.ts"
   ],
-  "angularCompilerOptions": {
-    "skipTemplateCodegen": true
-  }
+  "exclude": [
+    "src/**/*.spec.ts",
+    "node_modules",
+    "demo",
+    "dist"
+  ]
 }

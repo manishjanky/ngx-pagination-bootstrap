@@ -1,15 +1,12 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { PaginationComponent } from "./ngx-pagination-bootstrap-component/ngx-pagination-bootstrap.component";
-
+import { PaginationComponent } from "./components/ngx-pagination-bootstrap-component/ngx-pagination-bootstrap.component";
 
 @NgModule({
   declarations: [PaginationComponent],
   imports: [CommonModule,FormsModule],
   exports: [PaginationComponent],
   providers: [],
-  bootstrap: []
-})
+  bootstrap: []})
 export class PaginationModule {}
