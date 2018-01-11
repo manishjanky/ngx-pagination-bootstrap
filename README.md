@@ -1,6 +1,14 @@
 # ngx-pagination-bootstrap
 
+[![GitHub license](https://img.shields.io/github/license/manishjanky/ngx-pagination-bootstrap.svg)](https://github.com/me-and/mdf/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/ngx-pagination-bootstrap.svg)]()
 [![Build Status](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap.svg?branch=master)](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap)
+[![npm](https://img.shields.io/npm/dt/ngx-pagination-bootstrap.svg)]()
+[![GitHub top language](https://img.shields.io/github/languages/top/manishjanky/ngx-pagination-bootstrap.svg)]()
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/manishjanky/ngx-pagination-bootstrap.svg)]()
+[![GitHub issues](https://img.shields.io/github/issues/manishjanky/ngx-pagination-bootstrap.svg)]()
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/manishjanky/ngx-pagination-bootstrap.svg)]()
+[![GitHub contributors](https://img.shields.io/github/contributors/manishjanky/ngx-pagination-bootstrap.svg)]()
 
 `ngx-pagination-bootstrap` is Bootstrap(4) based pagination module for angulat(2+) applications
 
