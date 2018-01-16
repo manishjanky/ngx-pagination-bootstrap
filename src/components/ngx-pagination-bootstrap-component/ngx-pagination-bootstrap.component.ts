@@ -16,9 +16,14 @@ export class PaginationComponent implements OnInit {
   public currentPage: number = 1;
   public totalPages: any = [];
   public pages: any = [];
+  public itemsRange = {
+    from: 1,
+    to: 0
+  };
   private nullAble: any = null;
   constructor() {
     this.pageSize = 10;
+    this.itemsRange.to = this.pageSize;
   }
 
   public ngOnInit() {
@@ -51,6 +56,7 @@ export class PaginationComponent implements OnInit {
   public changePageData($event: any) {
     this.getPageItems($event);
     this.getNextPagesArrayToDisplay();
+    this.calculateCurrentItemsRange();
   }
 
   public getPageItems($event: any) {
@@ -63,7 +69,7 @@ export class PaginationComponent implements OnInit {
   }
 
   public getCurrentPageData() {
-    const start = ((this.currentPage - 1) * this.pageSize);
+    const start = (this.currentPage - 1) * this.pageSize;
     const end = start + Number(this.pageSize);
     return this.data.slice(start, end);
   }
@@ -72,7 +78,8 @@ export class PaginationComponent implements OnInit {
     let endIndex = this.currentPage + 2 < 5 ? 5 : this.currentPage + 2;
     if (endIndex > this.totalPages.length) {
       endIndex = this.totalPages.length;
-      startIndex = this.totalPages.length - 5 < 0 ? 0 : this.totalPages.length - 5;
+      startIndex =
+        this.totalPages.length - 5 < 0 ? 0 : this.totalPages.length - 5;
     }
     this.pages = this.totalPages.slice(startIndex, endIndex);
   }
@@ -97,4 +104,12 @@ export class PaginationComponent implements OnInit {
     this.navigateToPage(this.currentPage - 1);
   }
 
+  public calculateCurrentItemsRange() {
+    this.itemsRange.from = this.pageSize * this.currentPage - this.pageSize + 1;
+    if (this.currentPage === this.pages[this.pages.length - 1]) {
+      this.itemsRange.to = this.itemsCount;
+      return;
+    }
+    this.itemsRange.to = this.pageSize * this.currentPage;
+  }
 }
