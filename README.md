@@ -10,7 +10,7 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/manishjanky/ngx-pagination-bootstrap.svg)]()
 [![GitHub contributors](https://img.shields.io/github/contributors/manishjanky/ngx-pagination-bootstrap.svg)]()
 
-`ngx-pagination-bootstrap` is Bootstrap(4) based pagination module for angulat(2+) applications
+`ngx-pagination-bootstrap` is Bootstrap(4) based pagination module for Angular(2+) applications
 
 ## Examples
 
