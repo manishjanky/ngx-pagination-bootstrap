@@ -3,6 +3,7 @@
 [![GitHub license](https://img.shields.io/github/license/manishjanky/ngx-pagination-bootstrap.svg)](https://github.com/me-and/mdf/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/ngx-pagination-bootstrap.svg)]()
 [![Build Status](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap.svg?branch=master)](https://travis-ci.org/manishjanky/ngx-pagination-bootstrap)
+[![Codecov branch](https://codecov.io/gh/manishjanky/ngx-pagination-bootstrap/branch/master/graphs/badge.svg)]()
 [![npm](https://img.shields.io/npm/dt/ngx-pagination-bootstrap.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/manishjanky/ngx-pagination-bootstrap.svg)]()
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/manishjanky/ngx-pagination-bootstrap.svg)]()
