@@ -23,7 +23,6 @@ export class PaginationComponent implements OnInit {
   private nullAble: any = null;
   constructor() {
     this.pageSize = 10;
-    this.itemsRange.to = this.pageSize;
   }
 
   public ngOnInit() {
@@ -31,6 +30,7 @@ export class PaginationComponent implements OnInit {
       this.itemsCount = this.data.length;
     }
     this.calculatePageNumbers();
+    this.calculateCurrentItemsRange();
   }
 
   public calculatePageNumbers() {
