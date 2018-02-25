@@ -85,9 +85,8 @@ class YourModule { ... }
 - **pageSize**: current page size. No of items per page
 - **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from your api or the way you want it to handle
 
-## CHANGELOG
-* `v1.4.0`
-
+## Changelog
+* v1.4.1
 ````
  Added support for Observable Data Source.
  Current items range display bug when itemcount 0 bug fix .

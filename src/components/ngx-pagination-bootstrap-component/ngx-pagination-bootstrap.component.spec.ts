@@ -149,7 +149,7 @@ describe("PaginationComponent", () => {
       component.itemsCount = 50;
       expect(component.currentPage).toEqual(1);
       expect(component.totalPages).toEqual([1, 2, 3, 4, 5]);
-    }, 2000)
+    }, 2000);
 
   });
 
