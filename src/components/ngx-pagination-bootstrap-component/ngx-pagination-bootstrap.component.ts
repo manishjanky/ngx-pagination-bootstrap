@@ -114,6 +114,11 @@ export class PaginationComponent implements OnInit, OnChanges {
   }
 
   public calculateCurrentItemsRange() {
+    if (this.itemsCount === 0) {
+      this.itemsRange.to = 0;
+      this.itemsRange.from = 0;
+      return;
+    }
     this.itemsRange.from = this.pageSize * this.currentPage - this.pageSize + 1;
     if (this.currentPage === this.pages[this.pages.length - 1]) {
       this.itemsRange.to = this.itemsCount;

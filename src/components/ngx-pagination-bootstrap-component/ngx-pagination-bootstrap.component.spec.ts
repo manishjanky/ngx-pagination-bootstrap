@@ -115,11 +115,20 @@ describe("PaginationComponent", () => {
     expect(component.itemsRange.to).toEqual(50);
   });
 
+  it("should calculate current pages items range index when itemscount is 0", () => {
+    component.pageSize = 10;
+    component.currentPage = 1;
+    component.itemsCount = 0;
+    this.pages = [3, 4, 5, 6, 7];
+    component.calculateCurrentItemsRange();
+    expect(component.itemsRange.from).toEqual(0);
+    expect(component.itemsRange.to).toEqual(0);
+  });
+
   it("should calculate current pages items range index", () => {
     component.pageSize = 10;
     component.itemsCount = 125;
     component.currentPage = 7;
-    component.itemsCount = 125;
     component.pages = [3, 4, 5, 6, 7];
     component.calculateCurrentItemsRange();
     expect(component.itemsRange.to).toEqual(125);
@@ -130,4 +139,30 @@ describe("PaginationComponent", () => {
     component.ngOnInit();
     expect(component.itemsCount).toEqual(13);
   });
+
+  it("should recalculate things if data source changes", () => {
+    component.pageSize = 10;
+    component.itemsCount = 125;
+    component.currentPage = 7;
+    component.pages = [3, 4, 5, 6, 7];
+    setTimeout(() => {
+      component.itemsCount = 50;
+      expect(component.currentPage).toEqual(1);
+      expect(component.totalPages).toEqual([1, 2, 3, 4, 5]);
+    }, 2000)
+
+  });
+
+  // it("should recalculate things if data source changes", () => {
+  //   component.pageSize = 10;
+  //   component.itemsCount = 125;
+  //   component.currentPage = 7;
+  //   component.pages = [3, 4, 5, 6, 7];
+  //   component.itemsCount = 50;
+  //   const chang = new SimpleChange(125,50,true);
+  //   component.ngOnChanges([chang]);
+  //   expect(component.currentPage).toEqual(1);
+  //   expect(component.totalPages).toEqual([1, 2, 3, 4, 5]);
+
+  // });
 });

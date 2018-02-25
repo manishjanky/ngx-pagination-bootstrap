@@ -11,7 +11,7 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/manishjanky/ngx-pagination-bootstrap.svg)]()
 [![GitHub contributors](https://img.shields.io/github/contributors/manishjanky/ngx-pagination-bootstrap.svg)]()
 
-`ngx-pagination-bootstrap` is Bootstrap(4) based pagination module for Angular(2+) applications
+`ngx-pagination-bootstrap` is Bootstrap(4) based pagination module for Angular(2+) applications.
 
 ## Examples
 
@@ -84,6 +84,14 @@ class YourModule { ... }
 - **pageNo**: current page number
 - **pageSize**: current page size. No of items per page
 - **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from your api or the way you want it to handle
+
+## CHANGELOG
+* `v1.4.0`
+
+````
+ Added support for Observable Data Source.
+ Current items range display bug when itemcount 0 bug fix .
+````
 
 ## Help Improve
 
