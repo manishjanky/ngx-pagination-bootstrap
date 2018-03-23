@@ -33,6 +33,7 @@ export class PaginationComponent implements OnInit, OnChanges {
   }
 
   public ngOnChanges(changes: SimpleChanges) {
+    this.currentPage = 1;
     const $event = {
       event: changes,
       pageNo: this.currentPage,

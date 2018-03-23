@@ -1,3 +1,4 @@
+import { SimpleChanges } from '@angular/core';
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { PaginationComponent } from "./ngx-pagination-bootstrap.component";
@@ -84,6 +85,15 @@ describe("PaginationComponent", () => {
     expect(component.pages).toEqual([3, 4, 5, 6, 7]);
   });
 
+  it("should get next array of pages to display", () => {
+    component.itemsCount = 66;
+    component.pageSize = 10;
+    component.currentPage = 6;
+    component.calculatePageNumbers();
+    component.getNextPagesArrayToDisplay();
+    expect(component.pages).toEqual([3, 4, 5, 6, 7]);
+  });
+
   it("should update the no of page on page size change", () => {
     component.itemsCount = 125;
     component.pageSize = 20;
@@ -140,15 +150,17 @@ describe("PaginationComponent", () => {
     expect(component.itemsCount).toEqual(13);
   });
 
-  it("should recalculate things if data source changes", () => {
+  it("should recalculate things if data source changes", (done) => {
     component.pageSize = 10;
     component.itemsCount = 125;
     component.currentPage = 7;
     component.pages = [3, 4, 5, 6, 7];
     setTimeout(() => {
       component.itemsCount = 50;
+      component.ngOnChanges({});
       expect(component.currentPage).toEqual(1);
       expect(component.totalPages).toEqual([1, 2, 3, 4, 5]);
+      done();
     }, 2000);
 
   });
