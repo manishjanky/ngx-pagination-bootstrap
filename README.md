@@ -91,7 +91,11 @@ class YourModule { ... }
  Added support for Observable Data Source.
  Current items range display bug when itemcount 0 bug fix .
 ````
-
+* v1.5.0
+````
+Angular 4.0.0 support added
+Minor bug fixes
+````
 ## Help Improve
 
 Found a bug or an issue with this? [Open a new issue](https://github.com/manishjanky/ngx-pagination-bootstrap/issues) here on GitHub.
