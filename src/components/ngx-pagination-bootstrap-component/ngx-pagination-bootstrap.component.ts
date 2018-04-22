@@ -3,7 +3,7 @@ import { Component, OnInit, Input, EventEmitter, Output, OnChanges, SimpleChange
 @Component({
   selector: "ng-pagination",
   templateUrl: "./ngx-pagination-bootstrap.component.html",
-  styleUrls: ["./ngx-pagination-bootstrap.component.css"]
+  styleUrls: ["./ngx-pagination-bootstrap.component.scss"]
 })
 export class PaginationComponent implements OnInit, OnChanges {
   /*Get the required inputs i.e pageSize and no of items*/

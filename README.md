@@ -20,14 +20,15 @@
 ## Installation
 
 * `npm install ngx-pagination-bootstrap`
-* `npm install bootstrap@4.0.0-alpha.6 --save-dev`
+* `npm install bootstrap@4.0.0 --save-dev`
 * include bootstrap scripts and styles in you `angular-cli.json` to be build of your build process.
 * or include bootstrap css in your index.html 
 
 `````
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 `````
-* Right now `bootstrap@4.0.0-alpha.6` is supported will add support for other versions soon.
+* Right now `bootstrap@4.0.0-alpha.6` is supported till `v1.5.0`.
+* Bootstrap `v4.0.0` supported from `v1.6.0` onwards.
 
 ### For webpack and tsc builds/ angular-cli builds
 
@@ -95,6 +96,11 @@ class YourModule { ... }
 ````
 Angular 4.0.0 support added
 Minor bug fixes
+````
+* v1.6.0
+````
+Bootstrap 4.0.0 supported
+Range of items hidden on small devices
 ````
 ## Help Improve
 
